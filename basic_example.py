@@ -8,7 +8,7 @@ ns  = api.namespace('hello', description='hello') #namespace
 
 
 resource_input = api.model('input', {
-    'sentence': fields.String(required=True, description='sentence')
+    'sentence': fields.String(required=True, description='sentence', example='hello string')
 })
 
 
