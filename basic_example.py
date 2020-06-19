@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_restplus import Api, Resource, fields
 
 
@@ -21,7 +21,7 @@ class HelloWorld(Resource):
     @api.expect(resource_input)
     def post(self):
         print(request.json['sentence'])
-        return 'hello world! post'
+        return jsonify({'return':'hello world! post'})
 
 
 
